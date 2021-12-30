@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+* {
+    height: 100%;
+}
+body {
+    background-image: radial-gradient(rgb(30, 30, 255), rgb(40, 158, 255));
+    background-attachment: fixed;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em
+}

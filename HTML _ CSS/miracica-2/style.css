@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'blact';
+    src: url('fonts/OldNewspaperTypes.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'folhas';
+    src: url('fonts/Leafs.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* variaves */
+
+:root {
+    --c0: whitesmoke;
+    --c1: black;
+    --c2: #5FA340;
+    --c3: #8D94F0;
+    --c4: #9BF075;
+    --c5: #F08A5D;
+    --c6: #A36448;
+}
+
+/* Geral */
+body{
+    text-shadow: 3px 2px 5px rgba(59, 59, 59, 0.5);
+    background-image: linear-gradient(30deg, var(--c2),  var(--c3),var(--c4),var(--c5), var(--c6));
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+/* Cabeçario */
+header {
+    font: normal oblique 1em 'Times New Roman', Times, serif;
+    background-color: var(--c2);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 5px 3px 5px rgba(59, 59, 59, 0.5);
+    padding: 1px 7px 8px 10px;
+    background-image: linear-gradient(0deg, var(--c2), 80%, var(--c4));
+}
+
+h1#cabeçario {
+    text-align: left;
+    font: normal normal 3em 'blact', 'Times New Roman', Times, serif;
+}
+
+nav {
+    text-align: right;
+}
+
+nav > a{
+    padding: 7px;
+    color: var(--c1);
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    font-weight: bolder;
+}
+
+/* Corpo */
+main {
+    background-color: var(--c0);
+    font: normal normal 1em Arial, Helvetica, sans-serif;
+    margin: auto auto 15px auto;
+    padding: 10px 20px;
+    border-radius: 0px 0px 15px 15px;
+    max-width: 1020px;
+    min-width: 320px;
+}
+
+h1 {
+    text-align: center;
+    font: oblique bold 2.9em 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font: oblique bold 2em 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font: normal bold 1.5em 'Times New Roman', Times, serif;
+}
+
+p {
+    font: normal normal 3em 'folhas', 'Times New Roman', Times, serif;
+    color: #000;
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 1.2em;
+}
+
+iframe{
+    display: block;
+    margin: auto;
+}
+
+img{
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    position:  fullsize;
+}
+
+div#duas-listas {
+    background-color: var(--c4);
+    border-radius: 10px;
+    padding: 10px;
+    columns: 2;
+}
+
+div#duas-listas h2{
+    font-size: 1.4em;
+    margin: 0px auto;
+}
+
+/* Pes */
+footer{
+    font-size: 1em;
+    text-align: center;
+}
+
+footer p{
+    font: normal normal 3em 'folhas', 'Times New Roman', Times, serif;
+    color: #000;
+}
+
+/* video responsivo */
+div.video{
+    background-color: var(--c0);
+    margin: 5px -20px;
+    padding: 5px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
