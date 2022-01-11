@@ -16,4 +16,4 @@ def nomeador(x, y, modo=0):
 
 #def iteragir
 def ligaraa():
-    print('foi lek')
+    print('foi lek') 
