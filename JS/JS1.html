@@ -1,22 +1,45 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js</title>
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: gold;
+        }
+    </style>
 </head>
 <body>
     <main>
-        <h1>Teste Java Script</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quos corrupti voluptatibus id nam mollitia, fugiat explicabo enim ducimus repellat delectus necessitatibus inventore nesciunt ipsam autem unde recusandae. Quis, reprehenderit.</p>
-    </main>
+        <h1>EEE rapaz</h1>
+        <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur in consectetur sit magnam itaque. Ullam minima quibusdam, voluptatum quos, magnam dicta ipsa nobis commodi fugiat, soluta fuga harum! Asperiores, perferendis.</p>
 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente aliquid illo, ex architecto perspiciatis suscipit ea quibusdam sequi dolorum. Non, recusandae fugit nemo reprehenderit perferendis dolores nobis explicabo corporis sit.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla at, quam rerum obcaecati, iure voluptatum incidunt quae iste magnam, facilis velit recusandae odio ducimus suscipit. Iste cumque facere magni delectus?</p>
+
+        <p id="parag">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi unde labore quam vero cumque pariatur quo excepturi tempora sit, repellat nulla natus recusandae cum, dolorem, aliquid voluptatibus sint. A, sunt!</p>
+    </main>
     <script>
-        window.alert('Cu com café nhame nhame')
-        window.confirm('aceitas?')
-        var nome = window.prompt('escreva para confirmar sua resposta')
-        window.alert('vc escreveu ${nome}')
+        //window.alert('Cu com café nhame nhame')
+        //window.confirm('aceitas?')
+        //var nome = window.prompt('escreva para confirmar sua resposta')
+        //window.alert(`vc escreveu ${nome} e e ${nome % 2 == 0?'par':'impar'}`)
+
+        var p = document.getElementsByTagName('p')[2]
+        p.style.color = 'blue'
+        p.innertext = 'cu'
+
+        //var o = window.document.getElementsByClassName('cl')[1].innertext = 'cu'
+        //o.style.background = 'greem'
+
+        var i = document.getElementById('parag')
+        i.style.color = 'red'
+
+        //var q = document.querySelector(`p#parag`)[3]
+        //q.style.color = 'red'
     </script>
 </body>
-</html>!
+</html>
