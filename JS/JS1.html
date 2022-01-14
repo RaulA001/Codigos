@@ -9,6 +9,16 @@
         h1 {
             background-color: gold;
         }
+        div {
+            background-color: blue;
+        }
+        p.parag {
+            background-color: brown;
+        }
+        .cl {
+            color: aliceblue;
+            font-size: 2em;
+        }
     </style>
 </head>
 <body>
@@ -16,11 +26,13 @@
         <h1>EEE rapaz</h1>
         <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur in consectetur sit magnam itaque. Ullam minima quibusdam, voluptatum quos, magnam dicta ipsa nobis commodi fugiat, soluta fuga harum! Asperiores, perferendis.</p>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente aliquid illo, ex architecto perspiciatis suscipit ea quibusdam sequi dolorum. Non, recusandae fugit nemo reprehenderit perferendis dolores nobis explicabo corporis sit.
+        <p class="cl">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente aliquid illo, ex architecto perspiciatis suscipit ea quibusdam sequi dolorum. Non, recusandae fugit nemo reprehenderit perferendis dolores nobis explicabo corporis sit.
         </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla at, quam rerum obcaecati, iure voluptatum incidunt quae iste magnam, facilis velit recusandae odio ducimus suscipit. Iste cumque facere magni delectus?</p>
-
-        <p id="parag">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi unde labore quam vero cumque pariatur quo excepturi tempora sit, repellat nulla natus recusandae cum, dolorem, aliquid voluptatibus sint. A, sunt!</p>
+        
+        <div id="move" onclick="clik()">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla at, quam rerum obcaecati, iure voluptatum incidunt quae iste magnam, facilis velit recusandae odio ducimus suscipit. Iste cumque facere magni delectus?</p>
+            <p id="parag">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi unde labore quam vero cumque pariatur quo excepturi tempora sit, repellat nulla natus recusandae cum, dolorem, aliquid voluptatibus sint. A, sunt!</p>
+        </div>
     </main>
     <script>
         //window.alert('Cu com café nhame nhame')
@@ -30,16 +42,24 @@
 
         var p = document.getElementsByTagName('p')[2]
         p.style.color = 'blue'
-        p.innertext = 'cu'
 
-        //var o = window.document.getElementsByClassName('cl')[1].innertext = 'cu'
-        //o.style.background = 'greem'
+        var ocl = window.document.getElementsByClassName('cl')[0]
+        ocl.style.color = 'greem'
 
         var i = document.getElementById('parag')
         i.style.color = 'red'
 
-        //var q = document.querySelector(`p#parag`)[3]
-        //q.style.color = 'red'
+        var qa = document.querySelector('p.parag')
+        qa.style.color = 'red'
+
+        var d = document.getElementById('move')
+        d.addEventListener('mouseout', sair)
+        function clik() {
+            d.style.background = 'red'
+        }
+        function sair() {
+            d.style.background = 'blue'
+        }
     </script>
 </body>
 </html>
