@@ -1,3 +1,5 @@
+//nem tudo aqui funciona plenamente na parte da semantica é apenas um teste dos comandos
+
 function soma(ns, toria) {
     var res = 0
     if (toria) {
@@ -50,3 +52,27 @@ function raiz(n, p=2) {
     res = n**(1/p)
     return res
 }
+
+var comando = 1
+let n1 = [4]
+let n2 = [2]
+switch (comando){
+    case 1:
+        res = soma(n1, n2)
+        break
+
+    case 2:
+        res = subtracao(n1, n2)
+        break
+    
+    case 3:
+        let ns = [n1[0], n2[0]]
+        console.log(ns)
+        res = mutiplicacao(ns)
+    
+    case 4:
+        res = divisao(n1, n2)
+
+}
+
+console.log(`A resposta para a operação ${comando} é ${res} `)
