@@ -361,8 +361,3 @@ class Play(Janela, Posicao):
 jogo = Play()
 jogo.PrintPlay()
 #jogo.Ant_buld_sp()
-
-#cu = ['als', 'ds']
-#cuu = ['ds']
-#if cuu[0] in cu:
-#    print('caralho')

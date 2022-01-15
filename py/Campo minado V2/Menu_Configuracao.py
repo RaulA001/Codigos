@@ -242,8 +242,8 @@ class MenuConfiguracao(Janela):
 
     def AbriMenu(self):
         from Main_menu import MainMenu
-        cu = MainMenu(self.Nome, self.NUM_Res, self.Dados)
-        cu.Print_Main_menu()
+        menu = MainMenu(self.Nome, self.NUM_Res, self.Dados)
+        menu.Print_Main_menu()
 
     def SalvarDados(self, NB, X, Y):
         self.Dados = [NB, X, Y]
