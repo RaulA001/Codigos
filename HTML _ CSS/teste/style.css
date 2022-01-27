@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+:root {
+    --c1: #5A71F5;
+    --c2: #A5B1F7;
+    --c3: #485AC2;
+    --c4: #2B3675;
+    --c5: #4F5475;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--c5);
+}
+
+/* header */
+
+header {
+    background-image: linear-gradient(0deg, var(--c2), var(--c3));
+}
+
+#main_header {
+    padding: 2%;
+    display: block;
+    font: normal 500 1.3em 'Times New Roman', Times, serif;
+}
+
+h1#log {
+    font: normal 800 2.5em 'Times New Roman', Times, serif;
+    padding: 0px 2%;
+    color: brown;
+}
+
+p#sub_log {
+    padding: 0% 6%;
+    color: brown;
+}
+
+nav{
+    background-image: linear-gradient(45, var(--c4), var(--c3));
+    font: normal 500 1.2em 'Times New Roman', Times, serif;
+    padding: 1.4%;
+}
+
+#nav1 {
+    text-align: right;
+}
+
+#nav2 {
+    text-align: left;
+}
+
+/* main */
+
+main {
+    font: normal normal 1em Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 900px;
+    margin: auto;
+    padding: 0;
+}
+
+#titulo {
+    padding: 2.5% 2%;
+    margin: 0px;
+
+    font-size: 2em;
+    color: red;
+}
+
+h1, h2, h3{
+    margin: 1% 3%;
+    padding: 1.5%;
+}
+
+h2 {
+    padding: 0px 0px 0.5% 1.5%;
+    text-indent: 3px;
+}
+
+h3 {
+    padding: 0px 0px 0.5% 2%;
+    text-indent: 5px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 7px;
+
+    padding: 0 10px;
+}
