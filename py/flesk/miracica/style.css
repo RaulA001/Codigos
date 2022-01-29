@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'luz-negra';
+    src: url('fonts/The Blacklight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'picos';
+    src: url('fonts/Hill Country.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    background-image: linear-gradient(30deg, #5FA340,  #8D94F0,#9BF075,#F08A5D, #A36448);
+    background-attachment: fixed;
+
+}
+
+main {
+    background-color: white;
+    border-radius: 10px;
+    width: 630px;
+    padding: 10px;
+    margin: auto;
+
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    margin-block-end: 30px;
+}
+
+p {
+    text-align: justify;
+    text-indent: 20px;
+}
+
+h1 {
+    
+    font-weight: normal;
+    font-style: normal;
+    margin: auto;
+    color: rgb(31, 30, 30);
+    text-shadow: 1px 1px 1px rgb(19, 18, 18);
+}
+
+#pricipal {
+    font-size: 3em;
+    text-align: center;
+    font-family: 'luz-negra';
+    padding-bottom: 10px;
+    
+}
+
+.desenho {
+    font-family: 'picos';
+    font-size: 4em;
+    text-indent: 0px;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+}
+
+footer {
+    font: normal normal 1.3em 'Times New Roman', Times, serif;
+}
+
+.mudar-pagina {
+    display: inline-block;
+}
+
+.rodape {
+    
+}
+
+div:hover {
+}
+
+p::first-letter {
+    text-decoration: yellow;
+}
