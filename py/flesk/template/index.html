@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Alaude</h1>
+    <a href="http://127.0.0.1:5000/miracica/index.html">Base</a> <br>
+    {{10 + 5}}
+    {{x + y}} <br>
+
+    {% if x == 10 %}
+    <p>T</p>
+    {% else %}
+    <p>F</p>
+    {% endif%}
+
+    {% for k, v in query.items() %}
+    <tr>
+        <th> {{k}}</th>
+        <td> {{v}} </td>
+    </tr>
+    {% endfor %}
+</body>
+</html>
