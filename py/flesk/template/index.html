@@ -23,6 +23,13 @@
         <th> {{k}}</th>
         <td> {{v}} </td>
     </tr>
-    {% endfor %}
+    {% endfor  %}
+
+    <form action="http://127.0.0.1:5000/cal/" method="post">
+        {% for c in range(4) %}
+            <input type="number" min='0' max='24' name="nota{{c+1}}"  placeholder = nota{{c+1}}> <br>
+        {% endfor%}
+        <button>Enviar</button>
+    </form>
 </body>
 </html>
