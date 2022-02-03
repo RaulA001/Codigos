@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank</title>
+</head>
+<body>
+    <h1>Bank</h1>
+    <div class="conteiner">
+        <div class="row">
+            <div class="col-cs-12">
+                <a href="/add" target="blank" >add</a>
+            </div>
+            <div class="col-xs-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for e in estud %}
+                        <tr>
+                            <td>{{e.nome}}</td>
+                            <td>{{e.idade}}</td>
+                            <td>
+                                <a href="/edit/{{e.id}}" target="blank">Edit</a>
+                                <a href="/Del/{{e.id}}" target="blank">Del</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
