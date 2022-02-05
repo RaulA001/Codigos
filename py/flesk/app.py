@@ -1,9 +1,10 @@
+import json
 
-from flask import Flask, redirect, url_for, request, abort, render_template, make_response
+from flask import Flask, redirect, url_for, request, abort, render_template, make_response, Response
 from json import dumps
 from werkzeug.utils import secure_filename
 import os
-from flask_sqlalchemy import SQLAlchemy
+from models import db, Estud
 
 app = Flask(__name__, static_folder='miracica/', template_folder='template')
 app.secret_key = 'a1234'
@@ -11,22 +12,16 @@ UPLOAD_FOLDER = os.path.join(os.getcwd(), 'imagem')
 
 #bd
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///estud.db'
-db = SQLAlchemy(app)
-class Estud(db.Model):
-    id = db.Column('id', db.Integer, primary_key=True, autoincrement=True)
-    nome = db.Column(db.String(150))
-    idade = db.Column(db.Integer)
-    def __init__(self, nome, idade):
-        self.nome = nome
-        self.idade = idade
 
 @app.route('/bank', methods=['GET', 'POST'])
 def bank():
     estud = Estud.query.all()
+    resut = [e.to_dict() for e in estud]
     print(estud)
-    return render_template('bank.html', estud=estud)
+    return Response(response=dumps(resut), status=200,content_type='application/json')
+    #return render_template('bank.html', estud=estud)
 
-@app.route('/add', methods=['GET', 'POST'])
+@app.route('/add', methods=['POST'])
 def add():
     if request.method == 'POST':
         estud = Estud(request.form['nome'], request.form['idade'])
@@ -42,7 +37,7 @@ def Del(id):
     db.session.commit()
     return redirect(url_for('bank'))
 
-@app.route('/edit/<int:id>', methods=['GET', 'POST'])
+@app.route('/edit/<int:id>', methods=['PUT', 'POST'])
 def edit(id):
     estud = Estud.query.get(id)
     if request.method == 'POST':
@@ -107,5 +102,7 @@ app.add_url_rule('/test', 'test', test)
 
 
 if __name__ == '__main__':
-    db.create_all()
+    db.init_app(app=app)
+    with app.test_request_context():
+        db.create_all()
     app.run(debug=True)
